@@ -2,13 +2,16 @@ import { AudioClip } from "./types";
 
 interface DrumProps {
   audioClip: AudioClip;
+  descriptionDiv: HTMLElement;
 }
 
-function Drum({ audioClip }: DrumProps) {
+function Drum({ audioClip, descriptionDiv }: DrumProps) {
   const playSound = (clip: AudioClip) => {
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
       .play()
       .catch(console.error);
+
+    descriptionDiv.innerText = clip.description;
   };
 
   return (
