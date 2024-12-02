@@ -2,16 +2,15 @@ import { AudioClip } from "./types";
 
 interface DrumProps {
   audioClip: AudioClip;
-  descriptionDiv: HTMLElement;
 }
 
-function Drum({ audioClip, descriptionDiv }: DrumProps) {
+function Drum({ audioClip }: DrumProps) {
   const playSound = (clip: AudioClip) => {
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
       .play()
       .catch(console.error);
 
-    descriptionDiv.innerText = clip.description;
+    document.getElementById("display")!.innerText = clip.description;
   };
 
   return (
@@ -20,7 +19,11 @@ function Drum({ audioClip, descriptionDiv }: DrumProps) {
       id={`drum-${audioClip.keyTrigger}`}
       onClick={() => playSound(audioClip)}
     >
-      <audio src={audioClip.url} id={audioClip.keyTrigger}></audio>
+      <audio
+        src={audioClip.url}
+        id={audioClip.keyTrigger}
+        className="clip"
+      ></audio>
       {audioClip.keyTrigger}
     </button>
   );
