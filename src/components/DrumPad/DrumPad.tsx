@@ -1,4 +1,5 @@
 import { AudioClip } from "../../types";
+import "./DrumPad.css";
 
 interface DrumPadProps {
   audioClip: AudioClip;
@@ -17,7 +18,7 @@ function DrumPad({ audioClip }: DrumPadProps) {
     <button
       className="drum-pad"
       id={`drum-${audioClip.keyTrigger}`}
-      onClick={() => playSound(audioClip)}
+      onMouseDown={() => playSound(audioClip)}
     >
       <audio
         src={audioClip.url}

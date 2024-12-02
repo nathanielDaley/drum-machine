@@ -3,6 +3,11 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #422800;
+  background-color: #fbeee0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
