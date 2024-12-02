@@ -1,10 +1,10 @@
-import { AudioClip } from "./types";
+import { AudioClip } from "../../types";
 
-interface DrumProps {
+interface DrumPadProps {
   audioClip: AudioClip;
 }
 
-function Drum({ audioClip }: DrumProps) {
+function DrumPad({ audioClip }: DrumPadProps) {
   const playSound = (clip: AudioClip) => {
     (document.getElementById(clip.keyTrigger) as HTMLAudioElement)
       .play()
@@ -29,4 +29,4 @@ function Drum({ audioClip }: DrumProps) {
   );
 }
 
-export default Drum;
+export default DrumPad;

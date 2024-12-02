@@ -1,5 +1,5 @@
 import "./App.css";
-import Drum from "./Drum";
+import Drum from "./components/Drum/Drum";
 import { audioClips } from "./utils/constants";
 
 function App() {
@@ -20,11 +20,7 @@ function App() {
   return (
     <div className="container" id="drum-machine" onKeyDown={playAudio}>
       <h1>Free Code Camp Drum Machine</h1>
-      <div className="whole-drum">
-        {audioClips.map((clip) => (
-          <Drum audioClip={clip} key={clip.keyTrigger} />
-        ))}
-      </div>
+      <Drum />
       <div id="display"></div>
     </div>
   );
