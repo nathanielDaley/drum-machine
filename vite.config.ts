@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/markdown-previewer/",
+  base: "/drum-machine/",
   plugins: [react()],
   server: {
     port: 3000,
