@@ -8,6 +8,8 @@ function Drum() {
       {audioClips.map((clip) => (
         <DrumPad audioClip={clip} key={clip.keyTrigger} />
       ))}
+      <div> </div>
+      <div id="display" className="drum__display"></div>
     </div>
   );
 }

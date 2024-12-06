@@ -1,5 +1,6 @@
 import "./App.css";
 import Drum from "./components/Drum/Drum";
+import Footer from "./components/Footer/Footer";
 import { audioClips } from "./utils/constants";
 
 function App() {
@@ -18,10 +19,14 @@ function App() {
   };
 
   return (
-    <div className="container" id="drum-machine" onKeyDown={playAudio}>
-      <h1>Free Code Camp Drum Machine</h1>
-      <Drum />
-      <div id="display"></div>
+    <div className="app">
+      <div className="app__content">
+        <div className="app__container" id="drum-machine" onKeyDown={playAudio}>
+          <h1>\Drum Machine</h1>
+          <Drum />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
