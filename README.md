@@ -1,4 +1,4 @@
-# React + Vite
+# Drum Machine
 
 A drum pedal using React and Vite.
 Click the buttons or press keys on you keyboard to play sounds.
